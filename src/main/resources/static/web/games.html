@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=device-width , initial-scale=1" name="viewport">
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+                    <title>
+                        Player Manager
+                    </title>
+                </link>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <div id="app">
+            <h1 class="text-center">
+                Salvo
+            </h1>
+            <div class="row">
+                <div class="col-6 mt-5">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    ID
+                                </th>
+                                <th>
+                                    GAME CREATION
+                                </th>
+                                <th>
+                                    PLAYERS
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="game in games">
+                                <td>
+                                    {{game.id}}
+                                </td>
+                                <td>
+                                    {{game.created}}
+                                </td>
+                                <td>
+                                    {{game.gamePlayers.map(x => x.player.userName).join(" vs. ")}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-6 mt-5">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Score
+                                </th>
+                                <th>
+                                    Won
+                                </th>
+                                <th>
+                                    Lost
+                                </th>
+                                <th>
+                                    Tied
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="player in players">
+                                <td>
+                                    {{player.userName}}
+                                </td>
+                                <td>
+                                    {{player.scoreTotal}}
+                                </td>
+                                <td>
+                                    {{player.gamesWon}}
+                                </td>
+                                <td>
+                                    {{player.gamesLost}}
+                                </td>
+                                <td>
+                                    {{player.gamesTie}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+</script>
+<script src="https://code.jquery.com/jquery-2.2.0.js">
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+</script>
+<script src="games.js">
+</script>
