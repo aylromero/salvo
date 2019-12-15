@@ -1,4 +1,4 @@
 # 💣 salvo 💣
 Salvo Game using Java and Spring
 
-![Tgif](https://github.com/aylromero/TGIF/blob/master/salvo.gif)
+![gif](https://github.com/aylromero/salvo/blob/master/salvo.gif)
