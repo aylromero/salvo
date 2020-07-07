@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width , initial-scale=1" name="viewport"/>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+        <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" rel="stylesheet"/>
+        <link href="styles/style.css" rel="stylesheet"/>
+        <link href="styles/styles.css" rel="stylesheet"/>
+        <link href="styles/fonts.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Roboto+Mono&display=swap" rel="stylesheet"/>
+        <link href="img/logo.png" rel="shortcut icon"/>
+        <title>
+            Salvo!
+        </title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="bounce-in-top" id="splash">
+                <img class="bounce-out-top" src="img/logo.png" style="width: auto; height: 200px;">
+                </img>
+            </div>
+            <div id="app" style="display: none;">
+                <div class="d-none row" id="barra">
+                    <div class="col-8" id="userNow">
+                    </div>
+                    <div class="col-4" id="logOut">
+                        <form id="form-logOut" v-on:submit.prevent="logOut()">
+                            <input class="btn btn-primary animated bounceInRight" id="logout" type="submit" value="Logout">
+                            </input>
+                        </form>
+                    </div>
+                </div>
+                <div class="butt mr-3">
+                    <img class="animated bounceInLeft" id="imglogo" src="img/log.png" style="width: auto; height: 75px;">
+                    </img>
+                    <button class="btn btn-primary mt-2 animated bounceInRight" data-target="#logIn" data-toggle="modal" id="btn-login" type="button">
+                        Sign in
+                    </button>
+                </div>
+                <div class="modal fade" id="logIn">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">
+                                    Sign In
+                                </h4>
+                                <button class="close" data-dismiss="modal" style="color: black!important" type="button">
+                                    ×
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="my-login-validation" id="form-logIn" method="post" v-on:submit.prevent="sendDate()">
+                                    <div class="form-label-group form-group">
+                                        <label for="inputEmail">
+                                            User
+                                        </label>
+                                        <input autofocus="" class="input form-control" name="username" required="" type="text" value=""/>
+                                    </div>
+                                    <div class="form-label-group form-group">
+                                        <label for="inputPassword">
+                                            Password
+                                        </label>
+                                        <input class="input form-control" data-eye="" name="password" required="" type="password"/>
+                                        <div class="invalid-feedback">
+                                            Password is required
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-checkbox custom-control">
+                                            <input class="custom-control-input" id="remember" name="remember" type="checkbox">
+                                                <label class="custom-control-label" for="remember">
+                                                    Remember Me
+                                                </label>
+                                            </input>
+                                        </div>
+                                    </div>
+                                    <div class="form-group m-0">
+                                        <input class="btn btn-dark btn-block" name="submit" type="submit" value="Sign In"/>
+                                    </div>
+                                    <div class="mt-4 text-center">
+                                        <p class="txt">
+                                            Don't have an account?
+                                        </p>
+                                        <button @click="showSignUp()" class="register" data-target="#signUp" data-toggle="modal" type="button">
+                                            Create One
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="signUp">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">
+                                    Register
+                                </h4>
+                                <button class="close" data-dismiss="modal" style="color: black!important" type="button">
+                                    ×
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form class="my-login-validation" id="register" method="post" v-on:submit.prevent="register()">
+                                    <div class="form-label-group form-group">
+                                        <label for="inputEmail">
+                                            User
+                                        </label>
+                                        <input class="form-control" name="userName" required="" type="text" value=""/>
+                                    </div>
+                                    <div class="form-label-group form-group">
+                                        <label for="inputEmail">
+                                            Name
+                                        </label>
+                                        <input class="form-control" name="firstName" required="" type="text" value=""/>
+                                        <div class="invalid-feedback">
+                                            What's your name?
+                                        </div>
+                                    </div>
+                                    <div class="form-label-group form-group">
+                                        <label for="inputEmail">
+                                            Mail
+                                        </label>
+                                        <input class="form-control" name="email" required="" type="text" value=""/>
+                                    </div>
+                                    <div class="form-label-group form-group">
+                                        <label for="inputEmail">
+                                            Password
+                                        </label>
+                                        <input class="form-control" name="password" required="" type="password"/>
+                                    </div>
+                                    <div class="form-group m-0">
+                                        <input class="btn btn-dark btn-block" name="submit" type="submit" value="Register"/>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fila animated bounceInLeft mt-5">
+                    <div class="column">
+                        <div class="animated bounceInLeft" id="newGame">
+                            <button @click="createGame()" class="boton" data-original-title="You must be logged" data-placement="right" data-toggle="tooltip" id="btn-newGame" type="button">
+                                Create Game
+                            </button>
+                            <p class="font">
+                                s
+                            </p>
+                        </div>
+                        <div id="games">
+                            <div class="blocks-game row mt-4 mb-5" v-for="game in games">
+                                <div class="division col-4" id="infoGame">
+                                    <p class="gameTitle">
+                                        Game: {{game.id}}
+                                    </p>
+                                    <p class="date">
+                                        {{game.date}}
+                                    </p>
+                                    <p class="date" style="display: none">
+                                        {{game.hour}}
+                                    </p>
+                                </div>
+                                <div class="col-4" id="players">
+                                    <ul>
+                                        <li class="game">
+                                            {{game.startCreator}}
+                                        </li>
+                                        <li class="game" v-for="gp in game.gamePlayers" v-if="gp.player.userName != game.startCreator">
+                                            {{gp.player.userName}}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <div class="result" v-if="game.state == 'finish'">
+                                        <p class="over">
+                                            Game Over
+                                        </p>
+                                        <template v-if="game.gamePlayers[0].score == game.gamePlayers[1].score">
+                                            <h3 class="animated flash delay-2s">
+                                                Tied!
+                                            </h3>
+                                        </template>
+                                        <template v-else-if="game.gamePlayers[0].score == 1.0">
+                                            <h3 class="animated flash delay-2s">
+                                                Won {{game.gamePlayers[0].player.userName}}
+                                            </h3>
+                                        </template>
+                                        <template v-else="">
+                                            <h3 class="animated flash delay-2s">
+                                                Won {{game.gamePlayers[1].player.userName}}
+                                            </h3>
+                                        </template>
+                                    </div>
+                                    <div class="result" v-else-if="game.state == 'joined' && user != 'Guest'">
+                                        <button @click="viewGame(game.gamePlayers)" class="join animated flash infinite delay-2s" type="button" v-if="user.userName == game.startCreator">
+                                            Join Game
+                                        </button>
+                                        <button @click="joinGame(game.id)" class="join animated flash infinite delay-2s" type="button" v-else="">
+                                            Join Game
+                                        </button>
+                                    </div>
+                                    <div class="result" v-else-if="game.state == 'inCourse'">
+                                        <button @click="viewGame(game.gamePlayers)" class="view" type="button" v-if="game.gamePlayers[0].player.userName == user.userName || game.gamePlayers[1].player.userName == user.userName">
+                                            View Game
+                                        </button>
+                                        <template v-else="">
+                                            <h3 class="animated flash delay-2s">
+                                                In course!
+                                            </h3>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" id="table-Score">
+                        <div>
+                            <h1 class="score tracking-in-expand delay 1s">
+                                Score
+                            </h1>
+                        </div>
+                        <table class="table table-hover table-borderless mt-5">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Score
+                                    </th>
+                                    <th>
+                                        Won
+                                    </th>
+                                    <th>
+                                        Lost
+                                    </th>
+                                    <th>
+                                        Tied
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="gameTitle" v-for="player in players">
+                                    <td>
+                                        {{player.userName}}
+                                    </td>
+                                    <td>
+                                        {{player.scoreTotal}}
+                                    </td>
+                                    <td>
+                                        {{player.gamesWon}}
+                                    </td>
+                                    <td>
+                                        {{player.gamesLost}}
+                                    </td>
+                                    <td>
+                                        {{player.gamesTie}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+        </script>
+        <script src="scripts/games.js">
+        </script>
+    </body>
+</html>

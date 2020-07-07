@@ -1,0 +1,616 @@
+* {
+    color: white!important;
+}
+body {
+    background-image: url(../img/back3.png);
+    background-repeat: no-repeat, repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+button #btn-newGame:hover {
+    color: #E8E8E8;
+}
+h3 {
+    font-family: "Led";
+    font-size: 1em;
+    text-transform: uppercase;
+}
+h2 {
+    font-family: SuperMario;
+}
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: none!important;
+}
+.btn.focus, .btn:focus {
+    box-shadow: none!important;
+}
+.gameTitle {
+    font-family: "Pixel";
+}
+.date {
+    font-family: "Date";
+}
+.over {
+    font-family: "Led";
+}
+.game {
+    font-family: "SuperMario";
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+th {
+    font-family: Led;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.score {
+    display: flex;
+    justify-content: center;
+    font-family: Pixel;
+    font-size: 2em;
+    text-decoration: underline wavy;
+}
+.tracking-in-expand {
+    -webkit-animation: tracking-in-expand 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.font {
+    font-family: uno;
+    font-size: 3em;
+    display: inline;
+}
+.btn-primary {
+    width: 150px;
+    height: 50px;
+    background: none!important;
+    border: 4px solid;
+    color: #3498db;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    border-radius: 40px;
+}
+.btn-primary::before, .btn-primary::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    background: #171E38;
+    transform: skewX(50deg);
+    transition: .4s linear;
+}
+.btn-primary::before {
+    top: -4px;
+    left: 10%;
+}
+.btn-primary::after {
+    bottom: -4px;
+    right: 10%;
+}
+.btn-primary:hover::before {
+    left: 80%;
+}
+.btn-primary:hover::after {
+    right: 80%;
+    background: #171E38;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: transparent!important;
+    border-color: white!important;
+}
+.butt {
+    display: flex;
+    justify-content: flex-end;
+}
+#logOut {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1em;
+}
+.join {
+    background: none!important;
+    font-family: Led;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#btn-Fire, #btn-AddShip {
+    background: none;
+    font-family: Pixel;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-decoration: underline wavy;
+    border: none;
+}
+.view {
+    background: none;
+    font-family: Led;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#imglogo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 80%;
+}
+.logoG {
+    display: flex;
+    justify-content: flex-end;
+}
+.modal-title {
+    color: black!important;
+    font-family: 'Fredoka One', cursive;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+label, .txt {
+    color: black!important;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Roboto Mono', monospace;
+}
+/* login */
+
+/* grilla */
+
+.salvoBD {
+    background-image: url(../img/nop.png);
+    background-size: cover;
+}
+.salvoBD_hits {
+    background-image: url("../img/fire.png");
+    background-size: cover;
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+.salvoBD_sunken {
+    background-color: #FF0000;
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+.salvoMe {
+    background-image: url(../img/champ.png);
+    background-size: cover;
+}
+.salvoOtherNone {
+    background-image: url(../img/non.png);
+    background-size: cover;
+}
+.salvoOtherOk {
+    background-color: #FF0000;
+}
+.salvoOtherOk p {
+    display: none;
+}
+#grid-salvo p {
+    display: none;
+}
+.my-login-page .brand {
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .05);
+    position: relative;
+    z-index: 1;
+}
+.my-login-page .brand img {
+    width: 100%;
+}
+.my-login-page .card-wrapper {
+    width: 400px;
+}
+.my-login-page .card {
+    border-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .05);
+}
+.my-login-page .card.fat {
+    padding: 10px;
+}
+.my-login-page .card .card-title {
+    margin-bottom: 30px;
+}
+.my-login-page .form-control {
+    border-width: 2.3px;
+}
+.my-login-page .form-group label {
+    width: 100%;
+}
+.my-login-page .btn.btn-block {
+    padding: 12px 10px;
+}
+.my-login-page .footer {
+    margin: 40px 0;
+    color: #888;
+    text-align: center;
+}
+@media screen and (max-width: 425px) {
+    .my-login-page .card-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 320px) {
+    .my-login-page .card.fat {
+        padding: 0;
+    }
+    .my-login-page .card.fat .card-body {
+        padding: 15px;
+    }
+}
+.register {
+    background: none;
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    border: none;
+    color: #2A386B!important;
+}
+input {
+    color: black!important;
+}
+.btn-dark {
+    color: white!important;
+}
+#logout {
+    color: white!important;
+}
+#splash {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+}
+.bounce-in-top {
+    -webkit-animation: bounce-in-top 1.1s both;
+    animation: bounce-in-top 1.1s both;
+}
+@-webkit-keyframes bounce-in-top {
+    0% {
+        -webkit-transform: translateY(-500px);
+        transform: translateY(-500px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    38% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    55% {
+        -webkit-transform: translateY(-65px);
+        transform: translateY(-65px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    72% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    81% {
+        -webkit-transform: translateY(-28px);
+        transform: translateY(-28px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    90% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    95% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+@keyframes bounce-in-top {
+    0% {
+        -webkit-transform: translateY(-500px);
+        transform: translateY(-500px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    38% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    55% {
+        -webkit-transform: translateY(-65px);
+        transform: translateY(-65px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    72% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    81% {
+        -webkit-transform: translateY(-28px);
+        transform: translateY(-28px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    90% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    95% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+li {
+    list-style: none;
+}
+/* Smartphone ----------- */
+
+@media only screen and (max-width: 978px) {
+    .flex-container {
+        margin-top: 30px;
+    }
+    .logoG {
+        display: none!important;
+    }
+    #datosPartida {
+        font-family: GT Walsheim;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    #btn-newGame {
+        background: none;
+        border: none;
+        font-family: tres;
+        font-size: 1.5em;
+    }
+    .score {
+        font-family: Pixel;
+        font-size: 1.5em;
+        text-decoration: underline wavy;
+        margin-top: 40px;
+        margin: 0.25rem !important;
+    }
+    .font {
+        display: none;
+    }
+    .btn-primary {
+        width: 105px;
+        height: 45px;
+        background: none!important;
+        border: 4px solid;
+        color: #3498db;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-size: 16px;
+        position: relative;
+        border-radius: 40px;
+    }
+    .table {
+        margin-top: 0.5rem !important;
+    }
+    #players {
+        margin-right: 1rem !important;
+    }
+    .game {
+        position: relative;
+        left: 75%;
+    }
+    #btn-Fire, #btn-AddShip {
+        background: none;
+        font-family: Pixel;
+        font-size: 1em;
+        text-transform: uppercase;
+        text-decoration: underline wavy;
+        border: none;
+    }
+}
+/* Tablet ----------- */
+
+@media (min-width: 519px) and (max-width: 978px) {
+    #datosPartida {
+        display: flex;
+        justify-content: center;
+        font-family: GT Walsheim;
+        font-size: 1.9em;
+        text-transform: uppercase;
+    }
+    .logoG {
+        display: flex;
+        justify-content: flex-end;
+    }
+    #btn-newGame {
+        background: none;
+        border: none;
+        font-family: tres;
+        font-size: 1.5em;
+    }
+    .score {
+        display: flex;
+        justify-content: center;
+        font-family: Pixel;
+        font-size: 1.5em;
+        text-decoration: underline wavy;
+    }
+    .font {
+        font-family: uno;
+        font-size: 2.5em;
+        display: inline;
+    }
+    .btn-primary {
+        width: 130px;
+        height: 50px;
+        background: none!important;
+        border: 4px solid;
+        color: #3498db;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-size: 16px;
+        position: relative;
+        border-radius: 40px;
+    }
+    #btn-Fire, #btn-AddShip {
+        background: none;
+        font-family: Pixel;
+        font-size: 1.6em;
+        text-transform: uppercase;
+        text-decoration: underline wavy;
+        border: none;
+    }
+}
+/* Large screens ----------- */
+
+@media (min-width: 978px) and (max-width: 2000px) {
+    #datosPartida {
+        display: flex;
+        justify-content: center;
+        font-family: GT Walsheim;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+    .logoG {
+        display: flex;
+        justify-content: flex-end;
+    }
+    #btn-newGame {
+        background: none;
+        border: none;
+        font-family: tres;
+        font-size: 2em;
+    }
+    .score {
+        display: flex;
+        justify-content: center;
+        font-family: Pixel;
+        font-size: 2em;
+        text-decoration: underline wavy;
+    }
+    .font {
+        font-family: uno;
+        font-size: 3em;
+        display: inline;
+    }
+    .btn-primary {
+        width: 150px;
+        height: 50px;
+        background: none!important;
+        border: 4px solid;
+        color: #3498db;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-size: 16px;
+        position: relative;
+        border-radius: 40px;
+    }
+    .column {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .fila {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    #btn-Fire, #btn-AddShip {
+        background: none;
+        font-family: Pixel;
+        font-size: 2em;
+        text-transform: uppercase;
+        text-decoration: underline wavy;
+        border: none;
+        text-align: center;
+    }
+    .rw {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .cl {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
