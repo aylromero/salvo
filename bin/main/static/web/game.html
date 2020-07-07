@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Battleship Grid</title> 
+</head>
+<body>
+   <div id = "app">
+       <h1>Salvo</h1>
+       <div>
+            <b>GAME: {{info.idGame}}</b>
+            <p v-for = "x in info.gamePlayers" v-if = "x.idGp != gp">{{info.player}} VS {{x.player.userName}} (viewer)</p>
+        </div>
+
+       <div class="flex-container">
+        <div id="dock">
+            <div id="display">
+                <p>Welcome...</p>
+            </div>            
+            <!--The new ships will show up here, waiting for been placed in the grid -->
+        
+        </div>
+        
+        <div id="grid">
+            <!--The grid will appear here -->
+        </div>
+        <div id="grid-salvo">
+            
+        </div>
+    </div>
+        
+       
+   </div>
+   
+   
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   
+    <script src="scripts/ships.js"></script>
+    <script src="scripts/grid.js"></script>
+    <script src="scripts/game.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+
+</body>
+</html>
